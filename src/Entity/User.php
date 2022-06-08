@@ -7,7 +7,9 @@ use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    itemOperations: ['put'],
+)]
 class User
 {
     #[ORM\Id]

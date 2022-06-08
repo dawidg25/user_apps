@@ -7,7 +7,9 @@ use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 
 #[ORM\Entity(repositoryClass: AppRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    itemOperations: ['get', 'put']
+)]
 class App
 {
     #[ORM\Id]
